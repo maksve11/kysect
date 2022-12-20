@@ -1,4 +1,4 @@
-﻿using Reports.DALayer.Models;
+﻿using Reports.DALayer.Models.Accounts;
 
 namespace Reports.DALayer.Entities.Employee;
 
@@ -9,7 +9,7 @@ public interface IBuilder
 
     IBuilder SetSubordinates(List<Employee> employees);
     IBuilder SetLeader(Guid id);
-    IBuilder SetAccount(Account account);
+    IBuilder SetAccount(EmployeeAccount account);
 
     Employee Build();
 }

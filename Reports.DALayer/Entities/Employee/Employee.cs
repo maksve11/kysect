@@ -1,5 +1,5 @@
 ﻿using System.Collections.Immutable;
-using Reports.DALayer.Models;
+using Reports.DALayer.Models.Accounts;
 using Reports.DALayer.Tools;
 
 namespace Reports.DALayer.Entities.Employee;
@@ -12,7 +12,7 @@ public class Employee : IEquatable<Employee>
     public Guid? Id { get; set; }
     public string? Name { get; set; }
     public string? Surname { get; set; }
-    public Account? Account { get; set; }
+    public EmployeeAccount? Account { get; set; }
 
     public EmployeeStatus? Status { get; set; }
     public List<Employee>? Subordinates { get; set; }

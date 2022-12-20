@@ -1,4 +1,4 @@
-﻿using Reports.DALayer.Models;
+﻿using Reports.DALayer.Models.Accounts;
 using Reports.DALayer.Tools;
 
 namespace Reports.DALayer.Entities.Employee;
@@ -56,7 +56,7 @@ public class Builder : IBuilder
         return this;
     }
 
-    public IBuilder SetAccount(Account account)
+    public IBuilder SetAccount(EmployeeAccount account)
     {
         _employee.Account = account;
         return this;
