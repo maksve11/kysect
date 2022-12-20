@@ -1,0 +1,5 @@
+D:\CodeC#\maksve11\lab6\Reports.PrLayer\obj\Debug\net6.0\Reports.PrLayer.csproj.AssemblyReference.cache
+D:\CodeC#\maksve11\lab6\Reports.PrLayer\obj\Debug\net6.0\Reports.PrLayer.GeneratedMSBuildEditorConfig.editorconfig
+D:\CodeC#\maksve11\lab6\Reports.PrLayer\obj\Debug\net6.0\Reports.PrLayer.AssemblyInfoInputs.cache
+D:\CodeC#\maksve11\lab6\Reports.PrLayer\obj\Debug\net6.0\Reports.PrLayer.AssemblyInfo.cs
+D:\CodeC#\maksve11\lab6\Reports.PrLayer\obj\Debug\net6.0\Reports.PrLayer.csproj.CoreCompileInputs.cache
