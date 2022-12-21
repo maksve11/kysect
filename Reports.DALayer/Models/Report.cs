@@ -13,8 +13,8 @@ public class Report
         ReportFinishTime = DateTime.Now;
     }
 
-    public IMessage Message { get; set; }
-    public Guid Id { get; set; }
+    public IMessage Message { get; private set; }
+    public Guid Id { get;  private set; }
     public DateTime CreationTime { get; set; }
     public DateTime ReportFinishTime { get; set; }
 }

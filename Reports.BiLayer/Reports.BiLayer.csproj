@@ -26,6 +26,7 @@
       <ProjectReference Include="..\..\Lab2\Isu.Extra.Test\Isu.Extra.Test.csproj" />
       <ProjectReference Include="..\..\Lab4\Banks.Test\Banks.Test.csproj" />
       <ProjectReference Include="..\..\Lab4\Banks\Banks.csproj" />
+      <ProjectReference Include="..\Reports.DALayer\Reports.DALayer.csproj" />
     </ItemGroup>
 
 </Project>

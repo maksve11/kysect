@@ -1,4 +1,5 @@
-﻿using Reports.DALayer.Tools;
+﻿using Reports.DALayer.Models.Accounts;
+using Reports.DALayer.Tools;
 
 namespace Reports.DALayer.Entities.Sources;
 
@@ -14,7 +15,7 @@ public class MobileSource : ISource
     }
 
     public string Name { get; set; }
-    public long MobilePhone { get; set; }
+    public long MobilePhone { get;  private set; }
     public Guid Id { get; set; }
 
     public string Author()

@@ -1,14 +1,15 @@
 ﻿using System.Collections.Immutable;
+using Reports.DALayer.Entities.Sources;
 using Reports.DALayer.Models.Accounts;
 using Reports.DALayer.Tools;
 
 namespace Reports.DALayer.Entities.Employee;
 
-public class Employee : IEquatable<Employee>
+public class Employee : IEquatable<Employee>, ISource
 {
     public Employee() { }
 
-    public Guid? LeaderId { get; set; }
+    public Employee? Leader { get; set; }
     public Guid? Id { get; set; }
     public string? Name { get; set; }
     public string? Surname { get; set; }
@@ -19,7 +20,7 @@ public class Employee : IEquatable<Employee>
 
     public void AddSubordinates(Employee employee)
     {
-        if ((bool)Subordinates?.Contains(employee))
+        if (Subordinates?.Contains(employee) != null)
             throw new DaException("this employee already yet");
         if (Status <= employee.Status)
             throw new DaException("this employee can't add because status");
@@ -28,7 +29,7 @@ public class Employee : IEquatable<Employee>
 
     public void RemoveSubordinates(Employee employee)
     {
-        if ((bool)Subordinates?.Contains(employee))
+        if (Subordinates?.Contains(employee) != null)
             throw new DaException("this employee doesn't here");
         Subordinates?.Remove(employee);
     }
@@ -51,5 +52,17 @@ public class Employee : IEquatable<Employee>
     public override int GetHashCode()
     {
         return HashCode.Combine(Id, Name, Surname, Subordinates);
+    }
+
+    public string Author()
+    {
+        return Name ?? throw new DaException("No Author for this message");
+    }
+
+    public void SetAccount(EmployeeAccount account)
+    {
+        if (Account is not null)
+            throw new DaException("Can't add this Account");
+        Account = account;
     }
 }

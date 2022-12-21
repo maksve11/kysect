@@ -20,8 +20,8 @@ public class EmployeeToEmployeeMessage : IMessage
         MessageId = Guid.NewGuid();
     }
 
-    public EmployeeAccount Author { get; set; }
-    public EmployeeAccount Receiver { get; set; }
+    public EmployeeAccount Author { get; private set; }
+    public EmployeeAccount Receiver { get; private set; }
     public string MessageText { get; set; }
     public DateTime SendTime { get; set; }
     public IMessage.MessageType Type { get; set; }

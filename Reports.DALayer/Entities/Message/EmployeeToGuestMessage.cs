@@ -20,8 +20,8 @@ public class EmployeeToGuestMessage : IMessage
         MessageId = Guid.NewGuid();
     }
 
-    public EmployeeAccount Author { get; set; }
-    public GuestAccount Receiver { get; set; }
+    public EmployeeAccount Author { get; private set; }
+    public GuestAccount Receiver { get; private set; }
     public string MessageText { get; set; }
     public DateTime SendTime { get; set; }
     public IMessage.MessageType Type { get; set; }

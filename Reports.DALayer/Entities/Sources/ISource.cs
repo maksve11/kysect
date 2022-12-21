@@ -1,4 +1,6 @@
-﻿namespace Reports.DALayer.Entities.Sources;
+﻿using Reports.DALayer.Models.Accounts;
+
+namespace Reports.DALayer.Entities.Sources;
 
 public interface ISource
 {

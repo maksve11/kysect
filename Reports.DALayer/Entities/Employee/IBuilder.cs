@@ -8,8 +8,7 @@ public interface IBuilder
     IBuilder SetStatus(int id);
 
     IBuilder SetSubordinates(List<Employee> employees);
-    IBuilder SetLeader(Guid id);
-    IBuilder SetAccount(EmployeeAccount account);
+    IBuilder SetLeader(Employee id);
 
     Employee Build();
 }

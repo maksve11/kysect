@@ -39,7 +39,7 @@ public class Builder : IBuilder
     {
         foreach (Employee emp in employees)
         {
-            if (!(bool)_employee.Subordinates?.Contains(emp))
+            if (_employee?.Subordinates?.Contains(emp) != null)
             {
                 _employee.AddSubordinates(emp);
             }
@@ -48,17 +48,11 @@ public class Builder : IBuilder
         return this;
     }
 
-    public IBuilder SetLeader(Guid id)
+    public IBuilder SetLeader(Employee id)
     {
-        if (_employee.LeaderId != null)
+        if (_employee.Leader != null)
             throw new DaException("there's leader yet");
-        _employee.LeaderId = id;
-        return this;
-    }
-
-    public IBuilder SetAccount(EmployeeAccount account)
-    {
-        _employee.Account = account;
+        _employee.Leader = id;
         return this;
     }
 

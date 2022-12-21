@@ -1,4 +1,5 @@
-﻿using Reports.DALayer.Tools;
+﻿using Reports.DALayer.Models.Accounts;
+using Reports.DALayer.Tools;
 
 namespace Reports.DALayer.Entities.Sources;
 
@@ -13,9 +14,10 @@ public class MessengerSource : ISource
         Id = Guid.NewGuid();
     }
 
-    public string Messenger { get; set; }
+    public string Messenger { get; private set; }
     public string Name { get; set; }
     public Guid Id { get; set; }
+
     public string Author()
     {
         return string.Concat(Name, Messenger);
